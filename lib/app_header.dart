@@ -19,7 +19,7 @@ class _HeaderAppState extends State<HeaderApp> {
         const Row(children: [
           Text('Your favourite', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
           SizedBox(height: 5),
-          Text(' food', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.amber)),
+          Text(' food', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.orange)),
         ]),
         Container(
           margin: const EdgeInsets.symmetric(vertical: 15),
