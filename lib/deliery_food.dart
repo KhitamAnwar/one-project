@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tryyy2/constant.dart';
 import 'food_menu.dart';
 import 'food_type.dart';
 
@@ -15,13 +14,13 @@ class DeliveryFood extends StatefulWidget {
 class _DeliveryFoodState extends State<DeliveryFood> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: const Color.fromARGB(255, 228, 226, 226),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SafeArea(
-              child: Column(
+    return const SafeArea(
+      child:  Scaffold(
+        backgroundColor:  Color.fromARGB(255, 228, 226, 226),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Column(
                 children: [
                   HeaderApp(),
                   FoodType(),
@@ -29,8 +28,8 @@ class _DeliveryFoodState extends State<DeliveryFood> {
                   FoodMenu(),
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

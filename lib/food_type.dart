@@ -21,9 +21,7 @@ class _FoodTypeState extends State<FoodType> {
                   itemBuilder:(context, index) {
                     return GestureDetector(
                       onTap: (){
-                        setState(() {
-                          _selectedtype = index;
-                        });
+                        setState(() => _selectedtype = index);
                       },
                       child: Container(
                         padding:  const EdgeInsets.all(10),
