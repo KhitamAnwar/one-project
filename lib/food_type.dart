@@ -24,6 +24,7 @@ class _FoodTypeState extends State<FoodType> {
                         setState(() => _selectedtype = index);
                       },
                       child: Container(
+                        alignment: Alignment.center,
                         padding:  const EdgeInsets.all(10),
                         margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                         height: 40,
@@ -32,7 +33,7 @@ class _FoodTypeState extends State<FoodType> {
                           borderRadius: const BorderRadius.all(Radius.circular(40)),
                           color: _selectedtype == index ? Colors.orange : Colors.white,
                         ),
-                        child: Center(child: Text(items[index], style:const TextStyle(fontWeight: FontWeight.bold, fontSize: 15), )),
+                        child: Text(items[index], style:const TextStyle(fontWeight: FontWeight.bold, fontSize: 15), ),
                       ),
                     );
                   
