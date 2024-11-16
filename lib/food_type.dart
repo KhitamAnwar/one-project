@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tryyy2/database.dart';
 
 import 'constant.dart';
 
@@ -10,10 +11,37 @@ class FoodType extends StatefulWidget {
 }
 
 class _FoodTypeState extends State<FoodType> {
-  int _selectedtype = 0;
+  bool isSelected = false;
+  int _selectedType = 0;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      height: 50,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        separatorBuilder: (context, index) => const SizedBox(width: 10),
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return ChoiceChip(
+            label: Text(items[index]),
+            shape: const StadiumBorder(),
+            selected: _selectedType == index,
+            surfaceTintColor: Colors.transparent,
+            onSelected: (selected) => setState(() {
+              _selectedType = index;
+            }),
+            labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+            selectedColor: _selectedType == index ? Colors.orange : Colors.white,
+          );
+        },
+      ),
+    );
+  }
+}
+
+/*
+SizedBox(
                 height: 50,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -38,6 +66,4 @@ class _FoodTypeState extends State<FoodType> {
                     );
                   
                 },),
-              );
-  }
-}
+              );*/

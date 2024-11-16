@@ -4,14 +4,9 @@ import 'food_type.dart';
 
 import 'app_header.dart';
 
-class DeliveryFood extends StatefulWidget {
+class DeliveryFood extends StatelessWidget {
   const DeliveryFood({super.key});
 
-  @override
-  State<DeliveryFood> createState() => _DeliveryFoodState();
-}
-
-class _DeliveryFoodState extends State<DeliveryFood> {
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
@@ -20,14 +15,10 @@ class _DeliveryFoodState extends State<DeliveryFood> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Column(
-                children: [
-                  HeaderApp(),
-                  FoodType(),
-                  FoodMenu(),
-                  FoodMenu(),
-                ],
-              ),
+              HeaderApp(),
+              FoodType(),
+              FoodMenu(),
+              FoodMenu(),
             ],
           ),
         ),
@@ -35,3 +26,4 @@ class _DeliveryFoodState extends State<DeliveryFood> {
     );
   }
 }
+

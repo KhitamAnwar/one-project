@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class HeaderApp extends StatefulWidget {
+class HeaderApp extends StatelessWidget {
   const HeaderApp({super.key});
 
-  @override
-  State<HeaderApp> createState() => _HeaderAppState();
-}
-
-class _HeaderAppState extends State<HeaderApp> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -18,7 +13,7 @@ class _HeaderAppState extends State<HeaderApp> {
         const Text('Choose', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
         const Row(children: [
           Text('Your favourite', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-          SizedBox(height: 5),
+          SizedBox(width: 5),
           Text(' food', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.orange)),
         ]),
         Container(
@@ -33,3 +28,4 @@ class _HeaderAppState extends State<HeaderApp> {
     );
   }
 }
+
